@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #252525; 
+    --white-color: #fff;
+    --light-grey: #b1b1b1;
+    --body-bg: #ececec;
+    --gap: 3rem;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--body-bg);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+h1,h2,h3,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 5.5rem;
+}
+
+h2{
+    font-size: 5rem;
+}
+
+h3{
+    font-size: 4.5rem;
+}
+
+h4{
+    font-size: 4rem;
+}
+
+h5{
+    font-size: 3.5rem;
+}
+
+h6{
+    font-size: 3rem;    
+}
+
+main{
+    max-width: 100rem;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+}
+
+.introducao{
+   padding-top: 1.5rem;
+   padding-bottom: 2.8rem;
+}
+
+.introducao p{
+    color: var(--light-grey);
+}
+
+.box{
+    box-shadow: 0 0.1rem 0.2rem rgba(132, 148, 165, 0.25);
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+}
+
+.password .text input{
+    padding-left: 1.5rem;
+    font-size: 2.5rem;
+    height: 4.5rem;
+    width: 300%;
+    border: none;
+    outline: none;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all 0.35s;
+}
+
+.password .text input.font-sm{
+    font-size: 2rem;
+}
+
+.password .text input.font-xs{
+    font-size: 1.5rem;
+}
+
+.password .text input.font-xxs{
+    font-size: 1.3rem;
+}
+
+.password .actions button{
+    padding-top: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 320ms;
+}
+
+.security-indicator{
+    height: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: #ddd;
+
+}
+
+.security-indicator .bar{
+    height: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    transition: all 320ms ease-in-out;
+} 
+
+.security-indicator .completed{
+    border-top-right-radius: 0;
+}
+
+.security-indicator .critical{
+    background-color: #eb5757;
+}
+
+.security-indicator .warning{
+    background-color: #f2c94c;
+}
+
+.security-indicator .safe{    
+    background-color: #27ae60;
+}
+
+.customize{
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+.customize .title{
+    border-bottom: 0.1rem solid var(--light-grey);
+    margin-bottom: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.customize .actions {
+    display: flex;
+    gap: var(--gap);
+    color: var(--primary-color);
+}
+
+.customize .password-length{
+    flex: 1;
+}
+
+.customize .password-length .slider{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 1.2rem;
+    background-color: var(--light-grey);
+    outline: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    opacity: 0.69;
+    transition: all 320ms;
+    margin-top: 1.75rem;
+}
+
+.customize .password-length .slider:hover{
+    opacity: 1;
+}
+
+.customize .password-length .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 2.5rem;
+    background-color: #120a8f;
+    cursor: pointer;
+}
+
+.customize .password-length .slider::-moz-range-thumb{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    background-color: #120a8f;
+    cursor: pointer;
+}
+
+.checkbox-container{
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.checkbox-container input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-container .checkmark{
+    position: absolute;
+    top: 0.15rem;
+    left: -1.24rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: var(--light-grey);
+    transition: all 320ms ease-in-out;
+}
+
+/*Seleciona todos os elementos com a classe checkmark que vem após um input dentro de checkbox-container*/
+.checkbox-container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+
+/*Seleciona todos os elementos com a classe checkmark que vem após um input dentro de checkbox-container*/
+.checkbox-container input:checked ~.checkmark{
+    background-color: #120a8f;
+}
+
+/*Símbolo de verificado/selecioanado/checked*/
+.checkbox-container .checkmark:after{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0.9rem;
+    top: 0.5rem;
+    width: 0.5rem;
+    height: 1.3rem;
+    border: solid var(--white-color);
+    border-width: 0 0.3rem 0.3rem 0;
+   transform: rotate(45deg); 
+}
+
+.checkbox-container input:checked ~.checkmark:after{
+    display: block;
+}
+
+.btn{
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 1.5rem 2.2rem;
+    transition: all 320ms ease-in-out;
+    background-color: #120a8f;
+    color: var(--white-color);
+}
+
+.btn:hover{
+    background-color: var(--white-color);
+    color: #120a8f;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    position: absolute;
+    bottom: 0.1vh;
+    background-color: var(--body-bg);
+    height: 5rem;
+    left: -0rem;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 -0.1rem -0.2rem rgba(132, 148, 165, 0.25);   
+}
+
+.footer-imgs a{
+    margin: 0.5rem;
+    transition: all 500ms ease-in-out;
+}
+
+.footer-imgs img:hover{
+    transform: rotate(-25deg);
+    height: 3rem;
+}
+
+@media only screen and (max-width: 48rem){
+    .password{
+        padding: 1rem;
+    }
+    .password .text input{
+        font-size: 2rem;
+        width: 120%;
+    }
+    
+    .password .text input.font-sm{
+        font-size: 2rem;
+    }
+    
+    .password .text input.font-xs{
+        font-size: 1.5rem;
+    }
+    
+    .password .text input.font-xxs{
+        font-size: 1.5rem;
+    }
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="introducao">
+            <h1>Gerador de senhas</h1>
+            <p>Utilize o nosso gerador para criar senhas com um alto nível de proteção</p>
+        </section>    
+
+        <section class="box">
+            <div class="password">
+                <div class="text">
+                    <input type="text" name="password" id="password">
+                </div>
+                <div class="actions">
+                    <button id="copy"><img src="./assets/imgs/copy.svg" alt="Icone de um retângulo acoima de outro. Significa copiar"></button>
+                    <button id="renew"><img src="./assets/imgs/renew.svg" alt="Icone com duas setas apontando para o inicio de cada uma. Significa atualizar"></button>
+                </div>
+            </div>
+            <div class="security-indicator">
+                <div id="security-indicator-bar" class="bar" ></div>
+            </div>
+        </section>
+        
+        <section class="box customize">
+            <h3 class="title">Customizar</h3>
+            <div class="actions">
+                <div class="password-length">
+                    <p>Tamanho da senha: <span id="length-value">16</span> </p>
+                    <input type="range" value="16" min="5" max="64" name="password-length" id="password-length" class="slider">
+                </div>
+                <div class="config">
+                    <label class="checkbox-container">
+                        <span class="text">Maiúsculas</span>
+                        <input type="checkbox" id="uppercase-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">
+                        <span class="text">Números</span>
+                        <input type="checkbox" id="numbers-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">
+                        <span class="text">Símbolos</span>
+                        <input type="checkbox" id="symbol-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                
+            </div>
+        </section>
+        <button class="btn" id="copyBtn">COPIAR SENHA</button>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-imgs">
+                    <a rel="nofollow" target="_blank" href="https://github.com/ViniTkL"><img src="../Assets/Imgs/iconmonstr-github-img.svg"></a>
+                    <a rel="nofollow" target="_blank" href="https://www.linkedin.com/in/vin%C3%ADcius-santana-azambuja-91a273240/"><img src="../Assets/Imgs/iconmonstr-linkedin-3imgsvg.svg"></a>
+                </div>
+                <div class="footer-texto">
+                    <p>Desenvolvido por: Vinícius Santana Azambuja</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
